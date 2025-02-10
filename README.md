@@ -33,3 +33,8 @@ If the pet is too tired (energy <= ENERGY_THRESHOLD), it refuses to play.
 Users can interact with the pet by calling the feed, play, and rest functions.
 
 The checkStatus function allows users to monitor the pet's well-being and make informed decisions.![Screenshot 2025-02-10 130859](https://github.com/user-attachments/assets/31f847d6-a411-46de-a58f-acd6d95683d2)
+
+![Screenshot 2025-02-10 130726](https://github.com/user-attachments/assets/a639290f-e2f5-4a02-b54e-305dfc827db4)
+
+![Screenshot 2025-02-10 130315](https://github.com/user-attachments/assets/6b4c6b09-e709-4964-9d5a-e7edaec8cf9a)
+
