@@ -1,0 +1,30 @@
+import Principal "mo:base/Principal";
+import HashMap "mo:base/HashMap";
+import Iter "mo:base/Iter";
+
+actor Challenge {
+    // Challenge 1: Check if the caller is anonymous
+    public shared ({ caller }) func is_anonymous() : async Bool {
+        Principal.isAnonymous(caller);
+    };
+
+    // Challenge 2 & 3: Create a HashMap for favorite numbers
+    let favoriteNumber = HashMap.HashMap<Principal, Nat>(10, Principal.equal, Principal.hash);
+
+    // Challenge 3 & 4: Add and show favorite numbers
+    public shared ({ caller }) func add_favorite_number(n : Nat) : async Text {
+        switch (favoriteNumber.get(caller)) {
+            case (null) {
+                favoriteNumber.put(caller, n);
+                return "You've successfully registered your number.";
+            };
+            case (?_) {
+                return "You've already registered your number.";
+            };
+        };
+    };
+
+    public shared ({ caller }) func show_favorite_number() : async ?Nat {
+        favoriteNumber.get(caller);
+    };
+};
